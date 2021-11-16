@@ -6,7 +6,7 @@ from transformer import Transformer
 
 if __name__ == "__main__":
 
-    enc_inputs, dec_inputs, dec_outputs, config = make_data()
+    enc_inputs, dec_inputs, dec_outputs = make_data()
     loader = Data.DataLoader(MyDataSet(enc_inputs, dec_inputs, dec_outputs), 2, True)
 
     model = Transformer().cuda()
